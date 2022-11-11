@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import joblib
+from sklearn.neighbors import KNeighborsClassifier
 
 
 st.title("Belajar KNN")
