@@ -3,23 +3,18 @@ import pandas as pd
 
 
 st.title("Belajar KNN")
-st.header("Ini Header - Belajar KNN")
+st.header("dataset IRIS")
 
-#Pengukuran Burung
-url = "https://vincentarelbundock.github.io/Rdatasets/csv/Stat2Data/Cuckoo.csv"
-df = pd.read_csv(url)
+SL = st.number_input('Insert Sepal Length')
+SW = st.number_input('Insert Sepal Width')
+PL = st.number_input('Insert Petal Length')
+PW = st.number_input('Insert Petal Width')
+
+data_baru = [[SL, SW, PL, PW]] 
 
 
-df.info()
-
-df.head(10)
-
-#Mean
-st.write("Mean nya adalah ",df["Length"].mean())
-
-#median
-st.write("Median nya adalah ",df["Length"].median())
-
-#Modus
-st.write("Modusnya ",df["Length"].mode())
+if st.button("Tentukan"):
+    knn = joblib.load("modelKnnIris.pkl")
+    inp_pred = knn.predict(data_baru)
+    st.write(inp_pred)
 
