@@ -12,12 +12,10 @@ df.info()
 df.head(10)
 
 #Mean
-df["Length"].mean()
+st.write(df["Length"].mean())
 
 #median
-df["Length"].median()
+st.write(df["Length"].median())
 
 #Modus
-df["Length"].mode()
-
-df
+st.write(df["Length"].mode())
