@@ -12,10 +12,10 @@ df.info()
 df.head(10)
 
 #Mean
-st.write(df["Length"].mean())
+st.write("Mean nya adalah ",df["Length"].mean())
 
 #median
-st.write(df["Length"].median())
+st.write("Median nya adalah ",df["Length"].median())
 
 #Modus
-st.write(df["Length"].mode())
+st.write("Modusnya ",df["Length"].mode())
