@@ -1,13 +1,23 @@
-"""
-# My first app
-Here's our first attempt at using data to create a table:
-"""
-
 import streamlit as st
 import pandas as pd
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
+
+#Pengukuran Burung
+url = "https://vincentarelbundock.github.io/Rdatasets/csv/Stat2Data/Cuckoo.csv"
+df = pd.read_csv(url)
+
+#Menampilkan informasi tipe data di semua kolom
+df.info()
+
+# Menampilkan 5 baris teratas
+df.head(10)
+
+#Mean
+df["Length"].mean()
+
+#median
+df["Length"].median()
+
+#Modus
+df["Length"].mode()
 
 df
