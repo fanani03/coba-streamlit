@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 #Pengukuran Burung
 url = "https://vincentarelbundock.github.io/Rdatasets/csv/Stat2Data/Cuckoo.csv"
@@ -21,7 +19,3 @@ dataset["Length"].median()
 
 #Modus
 dataset["Length"].mode()
-
-plt.figure()
-sns.distplot(dataset["Length"])
-plt.show()
