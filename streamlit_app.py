@@ -20,7 +20,7 @@ if st.button("Tentukan"):
     inp_pred = knn.predict(data_baru)
     if inp_pred[[0]] == 0:
         st.write("Setosa")
-    else if inp_pred[[0]] == 1:
+    elif inp_pred[[0]] == 1:
         st.write("Versicolor")
     else:
         st.write("Virginica")
