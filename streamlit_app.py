@@ -18,9 +18,9 @@ data_baru = [[SL, SW, PL, PW]]
 if st.button("Tentukan"):
     knn = joblib.load("modelKnnIris.pkl")
     inp_pred = knn.predict(data_baru)
-    if inp_pred == 0:
+    if inp_pred[[0]] == 0:
         st.write("Setosa")
-    else if inp_pred == 1:
+    else if inp_pred[[0]] == 1:
         st.write("Versicolor")
     else:
         st.write("Virginica")
