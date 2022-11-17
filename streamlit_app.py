@@ -19,11 +19,11 @@ if st.button("Tentukan"):
     knn = joblib.load("modelKnnIris.pkl")
     inp_pred = knn.predict(data_baru)
     if inp_pred[[0]] == 0:
-        st.write("Setosa")
+        st.success("Hasil Prediksi adalah Setosa")
     elif inp_pred[[0]] == 1:
-        st.write("Versicolor")
+        st.success("Hasil Prediksi adalah Versicolor")
     else:
-        st.write("Virginica")
+        st.success("Hasil Prediksi adalah Virginica")
 
 
     
